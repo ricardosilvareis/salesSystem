@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db_salesSystem" Class="systemConnectionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=db_salesSystem;Integrated Security=True" SettingsObjectName="system.DAL.Properties.Settings" SettingsPropertyName="db_salesSystemConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.id_category" Member="category">
+    <Type Name="category">
+      <Column Name="id_category" Member="id_category1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="category_products" Member="products" ThisKey="id_category1" OtherKey="id_category" Type="products" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_products" Member="products">
+    <Type Name="products">
+      <Column Name="id_products" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="value" Type="System.Decimal" DbType="Decimal(25,0)" CanBeNull="true" />
+      <Column Name="id_category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="category_products" Member="category" ThisKey="id_category" OtherKey="id_category1" Type="category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_marketplace" Member="marketplace">
+    <Type Name="marketplace">
+      <Column Name="id_marketplace" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="site" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telephone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="contact" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_seller" Member="seller">
+    <Type Name="seller">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_fantasy" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="company_name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="cnpj" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telephone" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

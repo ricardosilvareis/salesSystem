@@ -1,0 +1,7 @@
+C:\Users\orica\source\repos\SalesSystem\system.DAL\bin\Debug\system.DAL.dll.config
+C:\Users\orica\source\repos\SalesSystem\system.DAL\bin\Debug\system.DAL.dll
+C:\Users\orica\source\repos\SalesSystem\system.DAL\bin\Debug\system.DAL.pdb
+C:\Users\orica\source\repos\SalesSystem\system.DAL\obj\Debug\system.DAL.csprojAssemblyReference.cache
+C:\Users\orica\source\repos\SalesSystem\system.DAL\obj\Debug\system.DAL.csproj.CoreCompileInputs.cache
+C:\Users\orica\source\repos\SalesSystem\system.DAL\obj\Debug\system.DAL.dll
+C:\Users\orica\source\repos\SalesSystem\system.DAL\obj\Debug\system.DAL.pdb
